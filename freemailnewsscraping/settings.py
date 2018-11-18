@@ -14,6 +14,9 @@ BOT_NAME = 'freemailnewsscraping'
 SPIDER_MODULES = ['freemailnewsscraping.spiders']
 NEWSPIDER_MODULE = 'freemailnewsscraping.spiders'
 
+DOWNLOADER_MIDDLEWARES = {'scrapy_crawlera.CrawleraMiddleware': 610}
+CRAWLERA_ENABLED = True
+CRAWLERA_APIKEY = '4d28ba7c36bd44d68a5b22de019ef428'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'freemailnewsscraping (+http://www.yourdomain.com)'
