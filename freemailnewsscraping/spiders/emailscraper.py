@@ -24,7 +24,7 @@ class EmailScraper (scrapy.Spider):
 
     def parse_page(self, response):
         # for page_num in range(1, 372317):
-        for page_num in range(200000, 372317):
+        for page_num in range(300000, 372317):
             sub_link = self.pagination.format(page_num=page_num)
             yield Request(url=sub_link, callback=self.parse_email, dont_filter=True)
 
